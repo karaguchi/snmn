@@ -1,6 +1,6 @@
 // ==========================================
 // チケット出現監視【代表者：結】
-// version: 6.8.1
+// version: 6.8.2
 // ==========================================
 
 
@@ -10,14 +10,15 @@
 
 // 公演ページ設定
     // timelesz 11/121
-    // ‼️選択中‼️ ジュニア 15/132
+    // ジュニア(合同) 15/132
+    // ジュニア(B&ZAI) 15/134
     // Snow Man 31/118
     // Travis Japan 38/124
-    // SixTONES 40/127
+    // ‼️選択中‼️ SixTONES 40/127
     // King & Prince 41/129
     // 中島健人 42/131
-const ARTIST_ID = "15";
-const EVENT_ID = "132";
+const ARTIST_ID = "40";
+const EVENT_ID = "127";
 
 // 狙う枚数
     // 入力例→"1"
@@ -27,13 +28,13 @@ const TARGET_PIECES = "1";
 
 // 狙う日程の曜日
     // 左側から優先 (日)(月)(火)(水)(木)(金)(土)
-const allowedDays = ["(日)","(土)","(月)","(金)"];
+const allowedDays = ["(土)","(日)","(月)","(金)"];
 
 // 狙う時間
     // この時間以外はスルー→["13:00"]
     // 左から優先→["13:00","18:00"]
     // 空配列なら時間不問→[]
-const TARGET_TIMES = [];
+const TARGET_TIMES = ["12:00","13:00"];
 
 // コンソールのログ
 const DEBUG_LOG = true;
@@ -205,9 +206,10 @@ const handleAuthPage = () => {
 // ==========================================
 let hasClickedBuy = false;
 let reloadTimer = null;
+let isCoolDown = false;
 
 const checkAndProcess = () => {
-  if (phase !== PHASE.SEARCH) return;
+  if (phase !== PHASE.SEARCH || isCoolDown) return;
   if (reloadTimer) clearTimeout(reloadTimer);
 
   // ★スキャン開始ログ
@@ -290,6 +292,7 @@ const checkAndProcess = () => {
 
 if (!hasClickedBuy) {
   hasClickedBuy = true;
+  isCoolDown = true;
   phase = PHASE.AUTH;
 
   const selectedTime = TARGET_TIMES.length
@@ -302,8 +305,15 @@ if (!hasClickedBuy) {
 
   saveLog(`❄️❄️❄️購入ボタンクリック: ${c.day} ${c.optionText}❄️❄️❄️`);
   c.button.click();
-}
 
+  const coolDownTime = Math.floor(Math.random() * 2019 + 1993);
+  setTimeout(() => {
+      hasClickedBuy = false;
+      isCoolDown = false;
+      phase = PHASE.SEARCH;
+      saveLog(`🔄 ${coolDownTime}ms 経過：次のアタックを解禁`);
+    }, coolDownTime);
+  }
 };
 
 
