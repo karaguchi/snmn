@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "for RELIEF Ticket [YU] スト",
   "description": "同行者が自動入力された後は手動でOFFにする",
-  "version": "6.8.2",
+  "version": "6.8.3",
   "content_scripts": [
     {
       "matches": [

@@ -1,6 +1,6 @@
 // ==========================================
 // チケット出現監視【代表者：結】
-// version: 6.8.2
+// version: 6.8.3
 // ==========================================
 
 
@@ -13,6 +13,7 @@
     // ジュニア(合同) 15/132
     // ジュニア(B&ZAI) 15/134
     // Snow Man 31/118
+    // WEST. 37/138
     // Travis Japan 38/124
     // ‼️選択中‼️ SixTONES 40/127
     // King & Prince 41/129
@@ -34,7 +35,7 @@ const allowedDays = ["(土)","(日)","(月)","(金)"];
     // この時間以外はスルー→["13:00"]
     // 左から優先→["13:00","18:00"]
     // 空配列なら時間不問→[]
-const TARGET_TIMES = ["12:00","13:00"];
+const TARGET_TIMES = [];
 
 // コンソールのログ
 const DEBUG_LOG = true;
@@ -261,7 +262,7 @@ const checkAndProcess = () => {
   }
 
   if (!candidates.length) {
-    const delay = Math.floor(Math.random() * 300 + 1200);
+    const delay = Math.floor(Math.random() * 122 + 1127);
     saveLog(`条件に合うチケットなし。 ${delay}ms後リロード`);
     
     reloadTimer = setTimeout(
