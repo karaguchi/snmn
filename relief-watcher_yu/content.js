@@ -1,6 +1,6 @@
 // ==========================================
 // チケット出現監視【代表者：結】
-// version: 6.8.3
+// version: 6.8.4
 // ==========================================
 
 
@@ -14,12 +14,12 @@
     // ジュニア(B&ZAI) 15/134
     // Snow Man 31/118
     // WEST. 37/138
-    // Travis Japan 38/124
-    // ‼️選択中‼️ SixTONES 40/127
+    // ‼️選択中‼️ Travis Japan 38/124
+    // SixTONES 40/127
     // King & Prince 41/129
     // 中島健人 42/131
-const ARTIST_ID = "40";
-const EVENT_ID = "127";
+const ARTIST_ID = "38";
+const EVENT_ID = "124";
 
 // 狙う枚数
     // 入力例→"1"
@@ -28,8 +28,8 @@ const EVENT_ID = "127";
 const TARGET_PIECES = "1";
 
 // 狙う日程の曜日
-    // 左側から優先 (日)(月)(火)(水)(木)(金)(土)
-const allowedDays = ["(土)","(日)","(月)","(金)"];
+    // 左側から優先 ["(土)","(日)","(月)","(火)","(水)","(木)","(金)"]
+const allowedDays = ["(土)","(日)","(月)","(火)","(水)","(木)","(金)"];
 
 // 狙う時間
     // この時間以外はスルー→["13:00"]
@@ -262,7 +262,7 @@ const checkAndProcess = () => {
   }
 
   if (!candidates.length) {
-    const delay = Math.floor(Math.random() * 122 + 1127);
+    const delay = Math.floor(Math.random() * 122 + 639);
     saveLog(`条件に合うチケットなし。 ${delay}ms後リロード`);
     
     reloadTimer = setTimeout(
@@ -407,7 +407,7 @@ const startApp = () => {
     bodyText.includes("エラー")
   ) {
 
-    const errorDelay = Math.floor(Math.random() * 2800 + 3200);
+    const errorDelay = Math.floor(Math.random() * 1992 + 2003);
     saveLog(`⚠️ サーバーエラーを検知。${errorDelay}ms 後にリダイレクト。`);
     setTimeout(() => reloadWithCacheBust(TARGET_DETAIL_URL), errorDelay);
     return;
