@@ -1,0 +1,494 @@
+
+<HTML>
+<head>
+<META HTTP-EQUIV="Content-Script-Type" CONTENT="text/javascript">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=x-sjis">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=x-sjis">
+<script language="JavaScript" src="//img.travel.rakuten.co.jp/share/ext/js/top.js" type="text/JavaScript"></script>
+<script language="JavaScript" type="text/JavaScript"
+    src="//img.travel.rakuten.co.jp/share/ext/js/setEndDateKaigai.js"></script>
+<script language="JavaScript" type="text/JavaScript"
+    src="//img.travel.rakuten.co.jp/kaigai/js/setDateNoLoad.js"></script>
+<link href="//img.travel.rakuten.co.jp/share/ext/css/new_top_pre.css?_=20220624" rel="stylesheet" type="text/css">
+<TITLE>「楽天トラベル」：宿泊情報:予約確認・変更</TITLE>
+</head>
+<BODY BGCOLOR="#FFFFFF" TOPMARGIN="0" LEFTMARGIN="0" MARGINHEIGHT="0" MARGINWIDTH="0" onLoad="getGoogleGif();">
+<center>
+<!--START_HEADER-->
+<div id="grpheaderArea">
+<p id="grpTagLine"><em>日本最大級の総合旅行サイト！ホテル・旅館の宿泊予約、航空券・高速バスやツアーの予約もオンラインで！</em></p>
+<h1 id="grpSiteID"><a href="//travel.rakuten.co.jp/"><img src="//img.travel.rakuten.co.jp/share/themes/header/images/logo_travel_w89.gif" alt="楽天トラベル" class="grpServiceLogo" width="89" height="44"></a></h1>
+<dl id="grpRemoteNav">
+<dt>楽天グループ関連</dt>
+<dd class="grpRelation">
+<ul><!--
+--><li class="grpHome"><a href="//www.rakuten.co.jp/">楽天市場へ</a></li><!--
+--></ul>
+</dd>
+<dt>補助メニュー</dt>
+<dd class="grpSiteUtility">
+<ul><!--
+--><li><a href="https://aps1.travel.rakuten.co.jp/portal/my/prv_page.first">個人ページ（予約の確認・変更・取消）</a></li><!--
+--><li><a href="https://travel.faq.rakuten.net/">ヘルプ</a></li><!--
+--><li><a href="//travel.rakuten.co.jp/howto/">楽天トラベルの使い方</a></li><!--
+--><li class="grpLast"><a href="//travel.rakuten.co.jp/sitemap/">サイトマップ</a></li><!--
+--></ul>
+</dd>
+</dl>
+<dl id="grpSectionDomestic">
+<dt>主なカテゴリー</dt>
+<dd class="grpMenuList">
+<ul><!--
+--><li><a href="//travel.rakuten.co.jp/"><img src="//img.travel.rakuten.co.jp/share/themes/header/images/tab_domestic.gif" alt="国内" width="140" height="22"></a></li><!--
+--><li><a href="//travel.rakuten.co.jp/kaigai/"><img src="//img.travel.rakuten.co.jp/share/themes/header/images/tab_foreign.gif" alt="海外" width="140" height="22"></a></li><!--
+--></ul>
+</dd>
+<!--
+<dd class="grpEexpansionArea">
+<p>拡張エリア</p>
+</dd>
+-->
+</dl>
+</div>
+<!--END_HEADER-->
+
+
+
+
+<TABLE WIDTH="600" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR><TD></TD></TR>
+<TR><TD COLSPAN="2" HEIGHT="3" ALIGN="center" VALIGN="bottom"></TD></TR>
+</TABLE>
+<script type="text/javascript" src="https://img.travel.rakuten.co.jp/share/common/js/lib/jquery/jquery.js"></script>
+<script type="text/javascript" src="https://trv.r10s.jp/share/common/js/lib/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="https://trv.r10s.jp/share/ext/js/hometown_tax.js"></script>
+<link href="https://trv.r10s.jp/share/ext/css/hometown_tax.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://trv.r10s.jp/share/ext/js/rakuten_mobile.js"></script>
+<link href="https://trv.r10s.jp/share/ext/css/rakuten_mobile.css" rel="stylesheet" type="text/css">
+<BR>
+<BR>
+<CENTER>
+<TABLE WIDTH="600" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+	<TR>
+		<TD>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0">
+<TR><TD>　</TD>
+<TD><BIG>予約内容詳細</BIG></TD><TD>　</TD></TR>
+<TR><TD BGCOLOR="#FF6666" COLSPAN="3"><IMG SRC="https://aps1.travel.rakuten.co.jp/img/null.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT="" ></TD></TR></TABLE>
+		</TD>
+	</TR>
+</TABLE>
+<BR>
+<BR>
+<TABLE WIDTH="600" BORDER="0" CELLSPACING="0" CELLPADDING="0" >
+<TR>
+<TD>
+	<div id="hometown-tax-reservationId-RYa0m9e44k" class="hometown-tax__container" data-reservationId="RYa0m9e44k"></div>
+</TD>
+</TR>
+</TABLE>
+<script>
+	var hometownTax = new ext.hometownTax();
+	hometownTax.init();
+</script>
+<BR>
+<TABLE WIDTH="600" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+<form action="https://aps1.travel.rakuten.co.jp/cgi-bin/kakunin_mail_jp" method=post>
+	<TR>
+		<TD>
+<B>1.送信先(E-mail)を選択、または入力してください。</B>
+			<BR><font color="#FF0000">
+			※E-mailアドレスの表示内容あるいは入力内容にお間違いがないかどうかよくご確認ください。
+			</font><BR>
+			<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="1">
+				<TR>
+					<TD>
+						<TABLE WIDTH="460" CELLSPACING="0" CELLPADDING="0" BORDER="0">
+							<TR>
+								<TD>
+<TR><TD><INPUT TYPE="checkbox" NAME="f_mail1" VALUE="chukachukapin@icloud.com" checked>chukachukapin@icloud.com</TD></TR>
+<TR><TD><INPUT TYPE="checkbox" NAME="f_email" VALUE="4">その他<INPUT TYPE="text" NAME="f_sub_email_txt" SIZE="30" MAXLENGTH="100"></TD></TR>
+							<TR><TD>　　<INPUT TYPE="checkbox" NAME="f_add_flg" VALUE=1>会員情報にE-mailアドレスを追加する。
+<A HREF="https://travel.rakuten.co.jp/henkou.html" target="_blank">会員変更はこちらから</A></TD></TR>
+						</TABLE>
+					</TD>
+				</TR>
+			</TABLE>
+<INPUT TYPE="hidden" NAME="f_sub_email_flg" VALUE="1">
+<BR>
+<B>2.受信形式を選択してください。</B>
+<BR><font color="#FF0000">※携帯アドレスでの受信形式は指定できません。</font><BR>
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="1"><TR><TD>
+<table width="460" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="12" valign="top">
+<input type="radio" name="f_c_mail_type" value="03" checked>
+</td>
+<td>ＨＴＭＬ形式</td>
+</tr>
+<tr>
+<td width="12" valign="top">
+<input type="radio" name="f_c_mail_type" value="01">
+</td>
+<td>テキスト形式</td>
+</tr>
+</table>
+</TD></TR></TABLE>
+<BR>
+入力された個人情報は<a href="https://privacy.rakuten.co.jp" target="_blank">個人情報保護方針</a>に基づき取り扱われることに同意するものとします。
+
+<BR><BR>
+			<TABLE WIDTH="570" BORDER="0" CELLPADDING="0" CELLSPACING="0" BGCOLOR="#FF0000">
+				<TR>
+					<TD BGCOLOR="#FF0000">
+						<TABLE WIDTH="570" BORDER="0" CELLPADDING="5" CELLSPACING="1">
+							<TR>
+								<TD WIDTH="570" ALIGN="center"><FONT COLOR="#FFFFFF">※ご注意</FONT></TD>
+							</TR>
+							<TR>
+								<TD ALIGN="left" BGCOLOR="#FFFFFF">
+									<TABLE WIDTH="570" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+										<TR>
+											<TD>▼ドメイン指定受信、アドレス指定受信をされている方は、下記アドレスの設定を追加して頂きますようお願い致します。travel@mail.travel.rakuten.co.jp</TD>
+										</TR>
+										<TR>
+											<TD>&nbsp;</TD>
+										</TR>
+										<TR>
+											<TD>▼「予約内容確認メールの送信」ボタンは一度だけクリックしてください。</TD>
+										</TR>
+									</TABLE>
+								</TD>
+							</TR>
+						</TABLE>
+					</TD>
+				</TR>
+			</TABLE>
+<BR>
+<INPUT TYPE="hidden" NAME="f_teikei" VALUE="">
+<INPUT TYPE="hidden" NAME="f_key" VALUE="I6g2ggAaaKaZbKIAmAbIVqU.baAKKAbIbVnatrJzpHT7pP05Yrb68n6x6ZImIbnIAUmUbmaAnAZnWam@bn5DZm5WIAUbt5Knb5WWqDqraUIDnDK5K">
+<INPUT NAME="send" VALUE="予約内容確認メールの送信" TYPE="SUBMIT">
+		</TD>
+	</TR>
+<INPUT TYPE="hidden" NAME="f_yoyaku_no" VALUE="RYa0m9e44k">
+</FORM>
+<TR><TD><HR SIZE="1"></TD></TR>
+</TABLE>
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0" WIDTH="600"><TR><TD>
+<TABLE CELLSPACING="0" CELLPADDING="5" BORDER="0"><TR><TD>
+<TABLE CELLSPACING="0" CELLPADDING="4" BORDER="1"><TR><TD>
+<TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0">
+<TR><TD><FONT color="#FF0000">【プラン適用】</FONT></TD><TD>【素泊まり】シンプルステイ</TD></TR><TR><TD>予約受付日</TD><TD>2026-02-02(月)</TD></TR>
+<TR><TD>宿泊施設名</TD><TD><FONT COLOR="#FF0000"><STRONG>ホテルポートプラザちば</STRONG></FONT>
+</TD></TR>
+<TR><TD>宿泊施設の住所</TD><TD>千葉県千葉市中央区千葉港8-5</SMALL></TD></TR>
+<TR><TD>連絡先</TD><TD>ホテルポートプラザちば:043-247-7211</TD></TR><TR><TD>宿泊施設電話番号</TD><TD>043-247-7211</TD></TR>
+<TR><TD>チェックイン日</TD><TD>2026-08-14(金)</TD></TR>
+<TR><TD>チェックアウト日</TD><TD>2026-08-17(月)</TD></TR>
+<TR><TD>チェックイン予定時刻</TD><TD>23:00</TD></TR>
+<TR><TD VALIGN="TOP">部屋のタイプ</TD><TD>シングル+ソファー・禁煙【ベッド幅140ｃｍ/85ｃｍ】()×１部屋<br>全室インターネット無料接続環境あり　駐車代無料（普通乗用車）</TD></TR>
+<TR><TD>利用人数</TD><TD>部屋あたり 2人<SMALL>(大人2人)</SMALL></TD></TR>
+<TR><TD valign="top">合計料金</TD><TD><FONT COLOR="#FF0000"><STRONG>                    64,200
+円(消費税込)</STRONG></FONT>
+</TD></TR>
+<TR><TD valign="top">クーポン利用　</TD><TD><FONT COLOR="#FF0000"><STRONG>9630円</STRONG></FONT>
+</TD></TR>
+<TR><TD valign="top">差引支払金額</TD><TD><FONT COLOR="#FF0000"><STRONG>                    54,570円(消費税込)</STRONG></FONT>
+</TD></TR>
+<TR><TD valign="top" WIDTH="80">楽天ポイント(獲得予定)</TD><TD><DIV><SPAN CLASS="totalPoint">合計<SPAN ID="sumOfPtAmt">                       992</SPAN>ポイント</SPAN><SPAN>ポイント付与対象額&nbsp;                    49,609円(税抜)</SPAN></DIV><A HREF="javascript:void(0);" ID="pointAccordionLink" CLASS="pointAccordion pointAccordionClose" onclick="pointAccordion()">ポイント内訳</A><div id="pointDetailAccordion" class="pointAccordionWindow pointAccordionClose"><div class="mypagePointAccordionWrapper"><table class="pointTable"><tbody><tr class="pointItem"><th><div class="pointTitle">通常ポイント（1%）</div><div class="pointInfo">チェックアウトから10日前後で還元</div></th><td class="pointAmount">                       496pt</td></tr><tr class="pointItem"><th><div class="pointTitle"><a href="https://travel.rakuten.co.jp/special/membership/bonus/?l-id=pointui_bonusprogram_pos" target="__blank">対象宿：現地決済（+1.0%）</a></div><div class="pointInfo">チェックアウト日から10日後頃に還元</div></th><td class="pointAmount">                       496pt</td></tr></tbody></table><div class="pointAttention"><div class="pointAttentionTitle">獲得予定ポイントについて</div><ul class="pointAttentionList"><li class="pointAttentionItem">ポイントは、チェックアウトから10日前後で還元されます（一部キャンペーンを除く）。</li><li class="pointAttentionItem">予約条件・決済方法の変更に伴い、適用されるキャンペーンおよび獲得予定ポイント数が変わることがございます。</li><li class="pointAttentionItem">一部の変更後の情報は、<a href="https://aps1.travel.rakuten.co.jp/portal/my/prv_page.first?f_tab=1" target="__blank">個人ページ</a>には反映されませんので、実際のポイント獲得数については<a href="https://point.rakuten.co.jp/?page=top" target="__blank">楽天PointClub</a>のポイント実績ページでご確認ください。</li><li class="pointAttentionItem">ポイント獲得に関する詳細・注意事項は<a href="https://travel.faq.rakuten.net/detail/000004869" target="__blank">こちら</a>。</li></ul></div></div></div> </TD> </TR><script type="text/javascript">function pointAccordion() {var pointDetailAccordion = document.getElementById('pointDetailAccordion');var pointAccordionLink = document.getElementById('pointAccordionLink');if (pointDetailAccordion.classList.contains('pointAccordionClose')) {pointDetailAccordion.classList.remove('pointAccordionClose');pointDetailAccordion.classList.add('pointAccordionOpen');pointAccordionLink.classList.remove('pointAccordionClose');pointAccordionLink.classList.add('pointAccordionOpen');} else if (pointDetailAccordion.classList.contains('pointAccordionOpen')) {pointDetailAccordion.classList.remove('pointAccordionOpen');pointDetailAccordion.classList.add('pointAccordionClose');pointAccordionLink.classList.remove('pointAccordionOpen');pointAccordionLink.classList.add('pointAccordionClose');}}</script><TR><TD valign="top">プラン内容</TD><TD>スタンダードな宿泊プランです。<br><br>駅近で千葉・幕張・舞浜方面へのアクセス抜群！<br>ビジネス利用・カップルでの利用・ファミリー利用、どのシチュエーションにも合うプランです。<br><br><br>お部屋のご案内<br>全客室禁煙、加湿機能付き空気清浄機を完備。<br>wi－fi接続料無料、ID、Passwordはお部屋にご案内がございます。<br>（テレビの枠の下方にあります。）<br>冷蔵庫はご利用前に扉の上のスイッチをONにしてご利用ください。<br><br><br>【添い寝のご案内】<br>・小学生以下のお子様は無料です。安全上ベッド1台に付き1名様までご利用頂けます<br>　(寝具・アメニティなし)<br><br>その他のご案内<br>駐車場はご宿泊者様は無料です。チェックイン前、チェックアウト後も当日に限り無料です。<br>ホテル敷地内のタイムス２４の駐車場をご利用ください。<br>駐車券が発券されますのでチェックインの際にご提示ください。<br>お荷物のお預かりはフロントカウンターにて承ります。<br><br>朝食料金改定値上げ）のお知らせ<br>この度、食材や諸経費の値上がりにより、誠に勝手ながら２０２６年１月４日（日曜日）より 朝食の価格を下記の通り改定させていただく運びとなりました。 <br>（価格改定実施日） ２０２６年１月４日（日曜日）より <br>（改定前価格）大人１，８００円　小学生　９６０円　未就学児（4～6歳）　６４０円　３歳未満無料<br>（改定後価格）大人２，０００円　小学生１，０００円　未就学児（4～6歳）　７００円　３歳未満無料<br><br>  なお、この告知前にご朝食付きの宿泊プランをご予約頂いているお客様は、ご予約時の価格でご利用いただけます。 料金変更によりご迷惑をおかけいたしますが、今後もより良い商品・サービスをご提供できるよう努力してまいりますので、 何卒ご理解いただきますようお願い申し上げます。</TD></TR></TABLE>
+</TD></TR></TABLE>
+</TD>
+</TR></TABLE>
+<BR>
+<BR>
+<BR>
+<TABLE WIDTH="600" CELLSPACING="0" CELLPADDING="4" BORDER="1"><TR><TD>
+<TABLE WIDTH="600" CELLSPACING="0" CELLPADDING="2" BORDER="0">
+<TR><TD WIDTH="120">予約受付番号</TD><TD><FONT COLOR="#FF0000"><STRONG>RYa0m9e44k</TR>
+<TR><TD WIDTH="120">宿泊代表者氏名</TD><TD>からぐち ゆう様<SMALL>(09067895659)</SMALL></TD></TR>
+</TABLE>
+</TD></TR></TABLE>
+</FORM>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function cancel_division(form, flg){
+    if(flg != null){
+        document.getElementById("flg").value = flg;
+    };
+}
+$(function(){
+    var isClicked = false;
+    $("#bookmngForm").submit(function(){
+        if (isClicked) {
+            alert("処理中です。暫くお待ち下さい。");
+            return false;
+        }
+        $('#bookmngForm input[type="submit"]').attr("disabled", true);
+        isClicked = true;
+    });
+});
+//-->
+</SCRIPT>
+</TD></TR></TABLE>
+<BR>
+<BR>
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0" WIDTH="600"><TR><TD>
+<TABLE CELLSPACING="0" CELLPADDING="3" BORDER="0" WIDTH="600" STYLE="TABLE-LAYOUT:FIXED">
+<TR><TD COLSPAN="4" BGCOLOR="#FFCCCC">　料金明細<SMALL>（１部屋あたり）</SMALL></TD></TR>
+<TR><TD COLSPAN="4" VALIGN="top"><STRONG>
+2026-08-14(金)</STRONG></TD></TR>
+<TR><TD COLSPAN="4" VALIGN="top">
+<div style="display: flex; flex-direction: row;">
+<div style="margin-right: 6pt;">
+<p style="margin: 0; line-height: 12.0pt;">食事</p>
+</div>
+<div style="display: flex; flex-direction: column;">
+<p style="margin: 0; line-height: 12.0pt;">
+大人：
+朝食別夕食別</p>
+</div></div>
+</TD></TR>
+<TR><TD COLSPAN="4">料金はサービス料込・消費税込</TD></TR>
+<TR><TD VALIGN="top" COLSPAN="4">
+[大人:9800円×2＝19600円]
+<BR>
+</TD></TR>
+<TR><TD COLSPAN="4">
+</TD></TR>
+<TR><TD ALIGN=RIGHT COLSPAN="4">
+日合計：
+<FONT COLOR="#FF0000">
+17819
+</FONT>
+円
+(サービス料込・消費税込 19600円)</TD></TR>
+<TR><TD COLSPAN="4"><HR SIZE="1"></TD></TR>
+<TR><TD COLSPAN="4" VALIGN="top"><STRONG>
+2026-08-15(土)</STRONG></TD></TR>
+<TR><TD COLSPAN="4" VALIGN="top">
+<div style="display: flex; flex-direction: row;">
+<div style="margin-right: 6pt;">
+<p style="margin: 0; line-height: 12.0pt;">食事</p>
+</div>
+<div style="display: flex; flex-direction: column;">
+<p style="margin: 0; line-height: 12.0pt;">
+大人：
+朝食別夕食別</p>
+</div></div>
+</TD></TR>
+<TR><TD COLSPAN="4">料金はサービス料込・消費税込</TD></TR>
+<TR><TD VALIGN="top" COLSPAN="4">
+[大人:12500円×2＝25000円]
+<BR>
+</TD></TR>
+<TR><TD COLSPAN="4">
+</TD></TR>
+<TR><TD ALIGN=RIGHT COLSPAN="4">
+日合計：
+<FONT COLOR="#FF0000">
+22728
+</FONT>
+円
+(サービス料込・消費税込 25000円)</TD></TR>
+<TR><TD COLSPAN="4"><HR SIZE="1"></TD></TR>
+<TR><TD COLSPAN="4" VALIGN="top"><STRONG>
+2026-08-16(日)</STRONG></TD></TR>
+<TR><TD COLSPAN="4" VALIGN="top">
+<div style="display: flex; flex-direction: row;">
+<div style="margin-right: 6pt;">
+<p style="margin: 0; line-height: 12.0pt;">食事</p>
+</div>
+<div style="display: flex; flex-direction: column;">
+<p style="margin: 0; line-height: 12.0pt;">
+大人：
+朝食別夕食別</p>
+</div></div>
+</TD></TR>
+<TR><TD COLSPAN="4">料金はサービス料込・消費税込</TD></TR>
+<TR><TD VALIGN="top" COLSPAN="4">
+[大人:9800円×2＝19600円]
+<BR>
+</TD></TR>
+<TR><TD COLSPAN="4">
+</TD></TR>
+<TR><TD ALIGN=RIGHT COLSPAN="4">
+日合計：
+<FONT COLOR="#FF0000">
+17819
+</FONT>
+円
+(サービス料込・消費税込 19600円)</TD></TR>
+<TR><TD COLSPAN="4"><HR SIZE="1"></TD></TR>
+<TR><TD ALIGN=LEFT COLSPAN="3">合計料金</TD>　<TD ALIGN=RIGHT COLSPAN="1"><FONT COLOR="#FF0000">64200円(消費税込)</FONT></TD></TR>
+<TR><TD ALIGN=LEFT COLSPAN="3" >ラ・クーポン利用&emsp;&emsp;【国内宿泊】12月までのご宿泊に使える15%OFFクーポン（最大15,000円まで割引可/先着利用300,000枚）※併用可</TD><TD ALIGN=RIGHT COLSPAN="1"><FONT COLOR="#FF0000">
+9630</FONT>円</TD></TR>
+<TR><TD ALIGN=LEFT COLSPAN="3">差引支払金額</TD><TD ALIGN=RIGHT COLSPAN="1"><FONT COLOR="#FF0000">54570円(消費税込)</FONT>
+</TD></TR>
+</TABLE>
+<BR>
+</TD></TR></TABLE>
+<BR>
+<TABLE WIDTH="600" BORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD>
+<TABLE CELLSPACING="0" CELLPADDING="4" BORDER="0" BGCOLOR="#EEEEEE" WIDTH="100%">
+<TR><TD>
+<FONT COLOR="#FF0000"><STRONG>※宿泊施設から</STRONG></FONT><BR>
+■15名様以上の団体は30日前のキャンセルから宿泊料金の50％のキャンセル料を頂きます。<BR></TD></TR></TABLE><BR>
+<TABLE CELLSPACING="0" CELLPADDING="4" BORDER="0" WIDTH="100%">
+<tbody>
+<tr><td>
+<h4 data-testid="cancel-policy-title" style="color: black; font-size: 14px; margin-top: 0; margin-bottom: 16px;">キャンセル料について</h4>
+<script type="module" src="/share/rtl/webcomponents/cancelpolicy/cancel-banner-content.js"></script>
+<cancel-banner-content id="cancel-banner-content" display-mode="normal" heading="" show-icon-type="hide" font-size="md" banner-position-y="0"></cancel-banner-content>
+<script>
+function insertData() {
+var cancelBannerContent = document.getElementById('cancel-banner-content');
+cancelBannerContent.cancelPolicy = {
+condition: "キャンセル料は無料",
+color: "green",
+prefix: "2026年8月12日 (水) 23:59 まで、",
+suffix: "です。"
+};
+cancelBannerContent.cancelDetailInformation = {
+cancelPolicySteps: [
+{
+condition: "2026年8月12日 (水) 23:59 まで",
+color: "green",
+notes: [
+"2026年8月14日(金) 宿泊分: キャンセル料は無料です。"
+,
+"2026年8月15日(土) 宿泊分: キャンセル料は無料です。"
+,
+"2026年8月16日(日) 宿泊分: キャンセル料は無料です。"
+]
+}
+,
+{
+condition: "前日 2026年8月13日 (木) 00:00 以降",
+color: "yellow",
+notes: [
+"2026年8月14日(金) 宿泊分: 宿泊料金の20%"
+,
+"2026年8月15日(土) 宿泊分: キャンセル料は無料です。"
+,
+"2026年8月16日(日) 宿泊分: キャンセル料は無料です。"
+]
+}
+,
+{
+condition: "当日 2026年8月14日 (金) 00:00 以降",
+color: "yellow",
+notes: [
+"2026年8月14日(金) 宿泊分: 宿泊料金の80%"
+,
+"2026年8月15日(土) 宿泊分: 宿泊料金の20%"
+,
+"2026年8月16日(日) 宿泊分: キャンセル料は無料です。"
+]
+}
+,
+{
+condition: "2泊目当日 2026年8月15日 (土) 00:00 以降",
+color: "yellow",
+notes: [
+"2026年8月15日(土) 宿泊分: 宿泊料金の80%"
+,
+"2026年8月16日(日) 宿泊分: 宿泊料金の20%"
+]
+}
+,
+{
+condition: "3泊目当日 2026年8月16日 (日) 00:00 以降",
+color: "yellow",
+notes: [
+"2026年8月16日(日) 宿泊分: 宿泊料金の80%"
+]
+}
+,
+{
+condition: "連絡なしの不泊/不着",
+color: "red",
+notes: [
+"2026年8月14日(金) 宿泊分: 宿泊料金の100%"
+,
+"2026年8月15日(土) 宿泊分: 宿泊料金の100%"
+,
+"2026年8月16日(日) 宿泊分: 宿泊料金の100%"
+]
+}
+],
+isBannerHighlighted: true,
+};
+}
+if (document.readyState === "loading") {
+document.addEventListener("DOMContentLoaded", insertData);
+} else {
+insertData();
+}
+</script>
+</td></tr></tbody></TABLE>
+<BR>
+<BR>
+<BR>
+</TD></TR></TABLE>
+<BR>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAy_iHNymEpuybZnY_bM70Z4y57vVuG5ho"></script>
+<SCRIPT TYPE="text/javascript">
+<!--
+function getGoogleGif()
+{
+var request = new XMLHttpRequest();
+request.open( "HEAD", "https://aps1.travel.rakuten.co.jp/share/HOTEL/11042/11042map.gif", false );
+request.send(null);
+if (request.status!=200){
+setGoogleMap();
+}
+}
+function setGoogleMap()
+{
+var latlng = new google.maps.LatLng(35.60818436,140.1027599);
+var myOptions = {
+zoom: 18,
+center: latlng,
+mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+var marker = new google.maps.Marker({
+position: latlng,
+map: map,
+title: "ホテルポートプラザちば"
+});
+}
+// -->
+</SCRIPT>
+<link type="text/css" rel="stylesheet" href="https://img.travel.rakuten.co.jp/share/themes/hotel/css/trvl_htl_route_map.css">
+<TABLE CELLSPACING="3" CELLPADDING="0" BORDER="0" WIDTH="600">
+<TR><TD COLSPAN="2" BGCOLOR="#FFCCCC">宿泊施設周辺の地図</TD></TR>
+<TR><TD><div id="map_canvas">
+<IMG id="mapGif" SRC="https://aps1.travel.rakuten.co.jp/share/HOTEL/11042/11042map.gif">
+</div>
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+「<a href="javascript:;" onclick="window.open('https://travel.rakuten.co.jp/info/yakkan/tehai.html','win1','width=800,height=500,toolbar=yes,location=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes');">旅行業約款 手配旅行の部</a>」「<a href="javascript:;" onclick="window.open('https://travel.rakuten.co.jp/info/condition/domestic.html','win2','width=800,height=500,toolbar=yes,location=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes');">旅行条件書</a>」も合わせてご確認ください。
+</center>
+<!--*************************START_FOOTER1*************************-->
+<center>
+<div id="grpfooterArea">
+<dl id="grpSupportMenu">
+<dt>補助メニュー</dt>
+<dd>
+<ul>
+<li><a href="//travel.rakuten.co.jp/corporate/">会社情報</a></li>
+<li><a href="//corp.rakuten.co.jp/careers/travel/">採用情報</a></li>
+<li><a href="//privacy.rakuten.co.jp/">個人情報保護方針</a></li>
+<li><a href="//travel.rakuten.co.jp/info/hotel_msg.html">資料請求</a></li>
+<li class="grpLast"><a href="//travel.rakuten.co.jp/info/">規約集</a></li>
+</ul>
+</dd>
+</dl>
+<p id="grpCopyright">&#169; Rakuten Group, Inc.</p>
+</div>
+</center>
+<!--*************************END_FOOTER*************************-->
+ 
+</html>
