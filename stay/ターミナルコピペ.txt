@@ -1,0 +1,2 @@
+cd /Applications/MAMP/htdocs/snmn/stay
+python3 extract_stay.py
